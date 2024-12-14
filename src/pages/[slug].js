@@ -14,7 +14,7 @@ export async function getStaticPaths() {
     const articles = await res.json();
 
     const paths = articles.map((article) => ({
-        params: { slug: article.blog_id }, // Ensure the slug is correct
+        params: { slug: article.slug }, // Ensure the slug is correct
     }));
 
     return { paths, fallback: false };

@@ -136,7 +136,7 @@ function Items({ blog }) {
                                             ? `${item.short_description.slice(0, 100)}...` // Truncate the string
                                             : item.short_description}
                                     </Text>
-                                    <Link style={{ color: '#bd93f9', textDecoration: 'underline' }} href={`/${item.blog_id}`}>
+                                    <Link style={{ color: '#bd93f9', textDecoration: 'underline' }} href={`/${item.slug}`}>
                                         Read More...
                                     </Link>
                                 </Flex>
