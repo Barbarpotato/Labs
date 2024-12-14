@@ -1,45 +1,39 @@
-name: Deploy to GitHub Pages
+name: Build and Deploy to GitHub Pages
 
 on:
   push:
     branches:
-      - main  # Trigger deployment only when pushing to the `main` branch (or whichever branch you're using)
+      - main  # Adjust this to your main branch (e.g., `master` or `main`)
 
 jobs:
-  deploy:
-    runs-on: ubuntu-latest  # Run on the latest Ubuntu environment
+  build:
+    runs-on: ubuntu-latest
 
     steps:
-      # Checkout the code from the repository
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v3
 
-      # Set up Node.js environment
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '19'  # Adjust to the version you're using (or use the latest LTS)
+          node-version: '16'
 
-      # Install dependencies
       - name: Install dependencies
         run: npm install
 
-      # Build the project
-      - name: Build the project
+      - name: Build the Next.js app
         run: npm run build
 
-      # Deploy to GitHub Pages using GitHub Actions
+      - name: Export the Next.js app
+        run: npm run export
+
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          branch: gh-pages  # The branch GitHub Pages will use
-          folder: out  # The folder containing the static files to deploy (default is `out`)
-          
-      # Optionally, configure GitHub Pages settings
-      - name: Configure GitHub Pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
-          git config --global user.name "GitHub Actions"
-          git config --global user.email "actions@github.com"
-          git add .
+          git config --global user.name "Barbarpotato"
+          git config --global user.email "darmawanjr88@gmail.com@example.com"
+          git remote set-url origin https://$GITHUB_TOKEN@github.com/Barbarpotato/Labs.git
+          git add -A
           git commit -m "Deploy to GitHub Pages"
-          git push origin gh-pages
+          git push --force origin gh-pages
