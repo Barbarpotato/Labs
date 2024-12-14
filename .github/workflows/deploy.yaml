@@ -28,10 +28,6 @@ jobs:
       - name: Build the project
         run: npm run build
 
-      # Export the static site to the out/ directory
-      - name: Export the static site
-        run: npm run export
-
       # Deploy to GitHub Pages using GitHub Actions
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
