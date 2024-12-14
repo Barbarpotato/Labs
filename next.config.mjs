@@ -3,8 +3,8 @@
  */
 const nextConfig = {
     output: 'export',
-    basePath: '/Labs/', // The repository name
-    assetPrefix: '/Labs/', // The repository name
+    basePath: '/Labs', // The repository name
+    assetPrefix: '/Labs', // The repository name
 }
 
 export default nextConfig

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Head from 'next/head';
 import { Fragment, useState } from 'react'
 import ReactPaginate from 'react-paginate';
 import {
@@ -31,6 +32,22 @@ export default function Home({ articles }) {
 
     return (
         <Fragment>
+            <Head>
+                <meta name="google-site-verification" content="OaSWua2pdfv0KF_FFiMg9mzJSLR7r9MytkWJI3mLf_8" />
+                <link rel="icon"
+                    href="https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/portofolio%2Fadmin%2FAvatar.svg?alt=media&token=622405c3-9dff-4483-af0c-ddc95fbe6445"
+                    type="image/svg+xml" />
+                <meta name="author" content="Darmawan Jr" />
+                <meta name="description"
+                    content="Darma is a Software Engineer known for flexibility in adapting to changing technologies and project demands. With a strong understanding of system design, software testing, and project management, Darma values good code quality, solid teamwork, and effective communication. Always eager to expand knowledge and keep up with the latest trends in software development." />
+                <meta name="keywords"
+                    content="Darmawan Jr, Software Engineer, system design, software testing, project management, code quality, teamwork, communication, software development" />
+                <link rel="canonical" href="https://barbarpotato.github.io" />
+                <meta property="og:description"
+                    content="Darma is a Software Engineer known for flexibility in adapting to changing technologies and project demands. With a strong understanding of system design, software testing, and project management, Darma values good code quality, solid teamwork, and effective communication. Always eager to expand knowledge and keep up with the latest trends in software development." />
+                <meta property="og:url" content="https://barbarpotato.github.io/" />
+                <meta property="og:type" content="website" />
+            </Head>
 
             <Heading textAlign={'center'} size={{ base: 'md', md: 'xl' }}
                 marginTop={{ base: '15px', md: '50px' }} marginBottom={'30px'} color={"#faf9ff"}>What Are You Looking For?</Heading>
