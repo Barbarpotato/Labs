@@ -17,8 +17,8 @@ export default function Home({ articles }) {
             <h1>Blog Articles</h1>
             <ul>
                 {articles.map((article) => (
-                    <li key={article.slug}>
-                        <Link href={`/article/${article.slug}`}>
+                    <li key={article.blog_id}>
+                        <Link href={`/labs/${article.blog_id}`}>
                             <a>{article.title}</a>
                         </Link>
                     </li>

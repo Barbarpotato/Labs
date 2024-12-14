@@ -33,7 +33,7 @@ export default function ArticlePage({ article }) {
                 <meta property="og:title" content={article.title} />
                 <meta property="og:description" content={article.short_description} />
                 <meta property="og:type" content="article" />
-                <meta property="og:url" content={`https://barbarpotato.github.io/article/${article.slug}`} />
+                <meta property="og:url" content={`https://barbarpotato.github.io/labs/${article.slug}`} />
             </Head>
             <article>
                 <h1>{article.title}</h1>
