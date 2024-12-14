@@ -24,13 +24,28 @@ jobs:
       - name: Build the Next.js app
         run: npm run build
 
+      - name: Export the Next.js app
+        run: npm run export
+
       - name: Deploy to GitHub Pages
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
-          git config --global user.name "Barbarpotato"
-          git config --global user.email "darmawanjr88@gmail.com@example.com"
-          git remote set-url origin https://$GITHUB_TOKEN@github.com/Barbarpotato/Labs.git
+          # Ensure we're on the right branch
+          git fetch origin
+          
+          # Checkout the gh-pages branch (create if it doesn't exist)
+          git checkout -B gh-pages origin/gh-pages || git checkout --orphan gh-pages
+          
+          # Remove any old files in the gh-pages branch
+          rm -rf *
+
+          # Copy the exported Next.js files to the gh-pages branch
+          cp -r out/* .
+
+          # Commit and push the changes to the gh-pages branch
           git add -A
+          git config --global user.name "Barbarpotato"
+          git config --global user.email "darmawanjr88@gmail.com"
           git commit -m "Deploy to GitHub Pages"
           git push --force origin gh-pages
