@@ -1,12 +1,12 @@
-name: Build and Deploy to GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
     branches:
-      - main  # Adjust this to your main branch (e.g., `master` or `main`)
+      - main  # This will trigger the workflow when changes are pushed to the main branch
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -25,25 +25,7 @@ jobs:
         run: npm run build
 
       - name: Deploy to GitHub Pages
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-        run: |
-          # Ensure we're on the correct branch
-          git fetch origin
-          
-          # Checkout the gh-pages branch (create if it doesn't exist)
-          git checkout -B gh-pages || git checkout --orphan gh-pages
-          
-          # Clear out any old files in the gh-pages branch
-          rm -rf *
-
-          # Copy the .next folder or public folder (if applicable)
-          # This is a workaround and will only work for static content.
-          cp -r .next/static/* .
-
-          # Commit and push the changes to the gh-pages branch
-          git add -A
-          git config --global user.name "Barbarpotato"
-          git config --global user.email "darmawanjr88@gmail.com"
-          git commit -m "Deploy static content to GitHub Pages"
-          git push --force origin gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./out  # Path to the out folder after npm run build
