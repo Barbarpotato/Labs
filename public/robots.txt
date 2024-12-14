@@ -1,0 +1,6 @@
+# Example robots.txt content
+User-agent: *
+Disallow: /api/
+Allow: / 
+
+Sitemap: https://barbarpotato.github.io/Labs/sitemap.xml

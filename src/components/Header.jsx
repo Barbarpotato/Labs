@@ -63,7 +63,7 @@ function Header() {
                                     color={primaryFontColor}
                                     size="md"
                                 >
-                                    <a href="/">Labs</a>
+                                    <a href="/Labs">Labs</a>
                                 </Heading>
                             )
                         }
