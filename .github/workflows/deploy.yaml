@@ -1,0 +1,49 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Trigger deployment only when pushing to the `main` branch (or whichever branch you're using)
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest  # Run on the latest Ubuntu environment
+
+    steps:
+      # Checkout the code from the repository
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Set up Node.js environment
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'  # Adjust to the version you're using (or use the latest LTS)
+
+      # Install dependencies
+      - name: Install dependencies
+        run: npm install
+
+      # Build the project
+      - name: Build the project
+        run: npm run build
+
+      # Export the static site to the out/ directory
+      - name: Export the static site
+        run: npm run export
+
+      # Deploy to GitHub Pages using GitHub Actions
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages  # The branch GitHub Pages will use
+          folder: out  # The folder containing the static files to deploy (default is `out`)
+          
+      # Optionally, configure GitHub Pages settings
+      - name: Configure GitHub Pages
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add .
+          git commit -m "Deploy to GitHub Pages"
+          git push origin gh-pages

@@ -1,0 +1,18 @@
+{
+  "name": "labs",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "postexport": "next-sitemap",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "14.2.5",
+    "next-sitemap": "^4.2.3",
+    "react": "^18",
+    "react-dom": "^18"
+  }
+}
