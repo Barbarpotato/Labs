@@ -34,6 +34,7 @@ export default function Home({ articles }) {
         <Fragment>
             <Head>
                 <meta name="google-site-verification" content="OaSWua2pdfv0KF_FFiMg9mzJSLR7r9MytkWJI3mLf_8" />
+                <title>Darmawan Jr - Labs</title>
                 <link rel="icon"
                     href="https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/portofolio%2Fadmin%2FAvatar.svg?alt=media&token=622405c3-9dff-4483-af0c-ddc95fbe6445"
                     type="image/svg+xml" />
