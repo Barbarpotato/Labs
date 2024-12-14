@@ -1,6 +1,5 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-    output: 'export'
+// next.config.mjs (ES Module syntax)
+export default {
+    output: 'export',
+    // Other configurations you may need
 };
-
-export default nextConfig;
