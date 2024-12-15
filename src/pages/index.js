@@ -10,7 +10,7 @@ import { motion } from 'framer-motion'
 
 
 export async function getStaticProps() {
-    const res = await fetch('https://cerberry-backend.vercel.app/blogs/all');
+    const res = await fetch('https://cerberry-backend.vercel.app/blogs');
     const articles = await res.json();
 
     return {
