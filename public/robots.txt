@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://barbarpotato.github.io/Labs/
+
+# Sitemaps
+Sitemap: https://barbarpotato.github.io/Labs/sitemap.xml
