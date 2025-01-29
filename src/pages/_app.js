@@ -1,9 +1,13 @@
-// pages/_app.js
+// Core Modules
+import { ChakraProvider } from "@chakra-ui/react";
+
+// Custom Components
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+
+// CSS
 import '../styles/globals.css';  // Import global CSS here
-import { ChakraProvider } from "@chakra-ui/react";
-import Link from 'next/link';  // Import Link component from Next.js
+
 
 function MyApp({ Component, pageProps }) {
     return (

@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 
 // Fetch the slugs for all articles
 export async function getStaticPaths() {
-    const res = await fetch('https://cerberry-backend.vercel.app/blogs');
+    const res = await fetch('https://api-barbarpotato.vercel.app/labs');
 
     if (!res.ok) {
         console.error('Failed to fetch articles:', res.statusText);
@@ -22,14 +22,18 @@ export async function getStaticPaths() {
 
 // Fetch data for a single article based on the slug
 export async function getStaticProps({ params }) {
-    const res = await fetch(`https://cerberry-backend.vercel.app/blog_by_slug/${params.slug}`);
+    const res = await fetch(`https://api-barbarpotato.vercel.app/labs/search?slug=${params.slug}`);
 
     if (!res.ok) {
         console.error('Failed to fetch article:', res.statusText);
         return { notFound: true }; // Optionally handle missing content
     }
 
-    const article = await res.json();
+    // get the response json
+    let article = await res.json();
+
+    // if the response data return the array. only get the first index
+    if (Array.isArray(article)) article = article[0];
 
     return {
         props: {
