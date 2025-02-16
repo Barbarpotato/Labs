@@ -22,7 +22,7 @@ export async function getStaticPaths() {
 
 // Fetch data for a single article based on the slug
 export async function getStaticProps({ params }) {
-    const res = await fetch(`https://api-barbarpotato.vercel.app/labs/search?slug=${params.slug}`);
+    const res = await fetch(`https://api-barbarpotato.vercel.app/labs?slug=${params.slug}`);
 
     if (!res.ok) {
         console.error('Failed to fetch article:', res.statusText);
@@ -32,8 +32,9 @@ export async function getStaticProps({ params }) {
     // get the response json
     let article = await res.json();
 
-    // if the response data return the array. only get the first index
-    if (Array.isArray(article)) article = article[0];
+    // if found then access the data property
+    // the response data is an array so access the first index
+    if (article.data) article = article.data[0];
 
     return {
         props: {
