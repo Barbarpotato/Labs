@@ -11,7 +11,8 @@ import { motion } from 'framer-motion'
 
 export async function getStaticProps() {
     const res = await fetch('https://api-barbarpotato.vercel.app/labs');
-    const articles = await res.json();
+    const response = await res.json();
+    const articles = response.data;
 
     return {
         props: {
