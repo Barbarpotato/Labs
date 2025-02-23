@@ -1,6 +1,9 @@
 import Head from 'next/head';
-import { Box, Center, Heading, Image } from "@chakra-ui/react";
-import { useEffect } from 'react';
+import { Box, Button, Center, Heading, Image, useDisclosure } from "@chakra-ui/react";
+import { useEffect, useRef } from 'react';
+
+// Darwin component
+import Darwin from '../components/Darwin'
 
 // Fetch the slugs for all articles
 export async function getStaticPaths() {
@@ -45,6 +48,10 @@ export async function getStaticProps({ params }) {
 }
 
 export default function ArticlePage({ article }) {
+
+    const { isOpen, onOpen, onClose } = useDisclosure()
+
+    const btnRef = useRef()
 
     useEffect(() => {
         const applyStyles = () => {
@@ -121,6 +128,20 @@ export default function ArticlePage({ article }) {
                         dangerouslySetInnerHTML={{ __html: article?.description }}
                     />
                 </Box>
+
+                <Button
+                    ref={btnRef}
+                    position="fixed"
+                    right="20px"
+                    bottom="20px"
+                    colorScheme="purple"
+                    onClick={onOpen}
+                >
+                    Ask Darwin
+                </Button>
+
+                <Darwin btnRef={btnRef} isOpen={isOpen} onOpen={onOpen} onClose={onClose} />
+
             </article>
         </>
     );
