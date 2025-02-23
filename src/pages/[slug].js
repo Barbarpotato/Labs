@@ -140,7 +140,7 @@ export default function ArticlePage({ article }) {
                     Ask Darwin
                 </Button>
 
-                <Darwin btnRef={btnRef} isOpen={isOpen} onOpen={onOpen} onClose={onClose} />
+                <Darwin btnRef={btnRef} isOpen={isOpen} onOpen={onOpen} onClose={onClose} content={article?.description} />
 
             </article>
         </>

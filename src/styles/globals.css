@@ -4,6 +4,11 @@ body {
     color: #faf9ff !important;
 }
 
+.chakra-slide {
+    background-color: #292b37 !important;
+    color: #faf9ff !important;
+}
+
 ::selection {
     color: #cc7bc9;
     background-color: #866bab;
