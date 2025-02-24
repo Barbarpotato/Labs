@@ -1,5 +1,6 @@
 import Head from 'next/head';
-import { Box, Button, Center, Heading, Image, useDisclosure } from "@chakra-ui/react";
+import { MdSupportAgent } from "react-icons/md";
+import { Box, Button, Center, Heading, Image, useBreakpointValue, useDisclosure } from "@chakra-ui/react";
 import { useEffect, useRef } from 'react';
 
 // Darwin component
@@ -52,6 +53,8 @@ export default function ArticlePage({ article }) {
     const { isOpen, onOpen, onClose } = useDisclosure()
 
     const btnRef = useRef()
+
+    const isMobile = useBreakpointValue({ base: true, md: false });
 
     useEffect(() => {
         const applyStyles = () => {
@@ -129,16 +132,27 @@ export default function ArticlePage({ article }) {
                     />
                 </Box>
 
-                <Button
-                    ref={btnRef}
-                    position="fixed"
-                    right="20px"
-                    bottom="20px"
-                    colorScheme="purple"
-                    onClick={onOpen}
-                >
-                    Ask Darwin
-                </Button>
+                {/* Mobile Button */}
+                {isMobile ? (
+                    <button
+                        ref={btnRef}
+                        onClick={onOpen}
+                        className='chatbot-toggle-button'
+                    >
+                        <MdSupportAgent size={30} color={'white'} />
+                    </button>
+                ) : (
+                    <Button
+                        ref={btnRef}
+                        position="fixed"
+                        right="20px"
+                        bottom="20px"
+                        colorScheme="purple"
+                        onClick={onOpen}
+                    >
+                        Ask Darwin AI
+                    </Button>
+                )}
 
                 <Darwin btnRef={btnRef} isOpen={isOpen} onOpen={onOpen} onClose={onClose} content={article?.description} />
 

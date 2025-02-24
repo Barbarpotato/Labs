@@ -94,6 +94,7 @@ function Darwin({ btnRef, isOpen, onOpen, onClose, content }) {
 
     return (
         <Drawer
+            blockScrollOnMount={false}
             size={"lg"}
             isOpen={isOpen}
             placement='right'
