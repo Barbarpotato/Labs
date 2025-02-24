@@ -42,6 +42,7 @@ function Darwin({ btnRef, isOpen, onOpen, onClose, content }) {
 
     const [message, setMessage] = useState([])
     const [history, setHistory] = useState([])
+    const [loading, setLoading] = useState(false)
 
     useEffect(async () => {
         const data = await fetchData("", history, content)
@@ -61,6 +62,7 @@ function Darwin({ btnRef, isOpen, onOpen, onClose, content }) {
     const handleSendMessage = async () => {
         if (!message.trim()) return; // Prevent sending empty messages
 
+        setLoading(true); // Disable input while waiting for response
         setHistory((prev) => [
             ...prev,
             {
@@ -90,6 +92,7 @@ function Darwin({ btnRef, isOpen, onOpen, onClose, content }) {
             };
             return newHistory;
         });
+        setLoading(false);
     };
 
     return (
@@ -146,12 +149,15 @@ function Darwin({ btnRef, isOpen, onOpen, onClose, content }) {
                         <Input
                             value={message}
                             onKeyDown={(e) => { if (e.key === 'Enter') handleSendMessage(); }}
-                            onChange={(e) => setMessage(e.target.value)}
+                            onChange={(e) => setMessage(e.target.value)} isDisabled={loading}
                             borderLeftRadius={'2xl'} borderRightRadius={0} borderWidth={3} colorScheme='purple' borderColor={"#536189"} focusBorderColor={"#ff79c6"}
                             my={2} placeholder='Send a message...' />
                     </Flex>
 
-                    <Button borderLeftRadius={0} colorScheme='purple' my={2} onClick={handleSendMessage}>Send</Button>
+                    <Button borderLeftRadius={0} colorScheme='purple' my={2} onClick={handleSendMessage}
+                        isLoading={loading} // Show loading indicator
+                        loadingText="Sending..."
+                    >Send</Button>
 
 
                 </DrawerFooter>
