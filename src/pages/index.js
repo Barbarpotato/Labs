@@ -6,6 +6,7 @@ import {
 } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 
+
 export async function getStaticProps() {
     try {
         const res = await fetch('https://api-barbarpotato.vercel.app/labs');
@@ -26,13 +27,21 @@ export async function getStaticProps() {
     }
 }
 
+
 export default function Home({ articles }) {
     const [searchQuery, setSearchQuery] = useState("");
+    const [currentPage, setCurrentPage] = useState(1); // <-- lifted state
 
     const filteredArticles = articles.filter((article) =>
         (article?.title ?? '').toLowerCase().includes(searchQuery.toLowerCase()) ||
         (article?.description ?? '').toLowerCase().includes(searchQuery.toLowerCase())
     );
+
+    // Reset to first page on search input change
+    const handleSearchChange = (e) => {
+        setCurrentPage(1); // <-- reset to first page
+        setSearchQuery(e.target.value);
+    };
 
     return (
         <Fragment>
@@ -62,7 +71,7 @@ export default function Home({ articles }) {
             <Flex w={'100%'} justifyContent={'center'} alignItems={'center'}>
                 <Flex w={{ base: '90%', md: '50%' }} textAlign={'center'}>
                     <Input
-                        onChange={(e) => setSearchQuery(e.target.value)}
+                        onChange={handleSearchChange}
                         value={searchQuery}
                         placeholder='Search Content Labs...'
                         color={"#faf9ff"}
@@ -72,14 +81,19 @@ export default function Home({ articles }) {
                         borderColor={"#536189"}
                         focusBorderColor={"#ff79c6"}
                     />
-
                 </Flex>
             </Flex>
 
-            <LabPagination blog={filteredArticles} itemsPerPage={9} />
+            <LabPagination
+                blog={filteredArticles}
+                itemsPerPage={9}
+                currentPage={currentPage}
+                onPageChange={setCurrentPage}
+            />
         </Fragment>
     );
 }
+
 
 function Items({ blog }) {
     return (
@@ -129,15 +143,14 @@ function Items({ blog }) {
 }
 
 
-function LabPagination({ blog, itemsPerPage = 9 }) {
-    const [currentPage, setCurrentPage] = useState(1);
+function LabPagination({ blog, itemsPerPage = 9, currentPage, onPageChange }) {
     const totalPages = Math.max(1, Math.ceil(blog.length / itemsPerPage));
 
     const startIdx = (currentPage - 1) * itemsPerPage;
     const currentItems = blog.slice(startIdx, startIdx + itemsPerPage);
 
     const handlePageChange = (page) => {
-        setCurrentPage(page);
+        onPageChange(page);
         window.scrollTo({ top: 0, behavior: "smooth" });
     };
 
@@ -212,3 +225,4 @@ function LabPagination({ blog, itemsPerPage = 9 }) {
         </>
     );
 }
+
