@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url><loc>https://barbarpotato.github.io/Labs</loc><lastmod>2025-04-04T06:47:54.941Z</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+<url><loc>https://barbarpotato.github.io/Labs/Understanding-RabbitMQ-A-Favorite-Simple-Messaging-Service</loc><lastmod>2025-04-04T06:47:54.942Z</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+<url><loc>https://barbarpotato.github.io/Labs/Supercharge-Your-AI-with-MCP-The-Future-of-Custom-AI-Tools</loc><lastmod>2025-04-04T06:47:54.942Z</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+<url><loc>https://barbarpotato.github.io/Labs/Understanding-Circuit-Breakers-in-Software-Engineering-From-Traditional-to-Serverless</loc><lastmod>2025-04-04T06:47:54.942Z</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+<url><loc>https://barbarpotato.github.io/Labs/Apache-Cassandra-The-NoSQL-Powerhouse</loc><lastmod>2025-04-04T06:47:54.942Z</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+<url><loc>https://barbarpotato.github.io/Labs/Why-API-Versioning-is-Really-Important-A-Lesson-from-My-Own-Mistake</loc><lastmod>2025-04-04T06:47:54.942Z</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+<url><loc>https://barbarpotato.github.io/Labs/Terraform-Labs-Automating-Google-Cloud-Infrastructure-Deployment</loc><lastmod>2025-04-04T06:47:54.942Z</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+<url><loc>https://barbarpotato.github.io/Labs/Jenkins-Unleashed-Transforming-Your-CICD-Workflow-for-Lightning-Fast-Delivery</loc><lastmod>2025-04-04T06:47:54.942Z</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+<url><loc>https://barbarpotato.github.io/Labs/Building-a-Robust-Microservices-Architecture-From-gRPC-to-Kubernetes</loc><lastmod>2025-04-04T06:47:54.942Z</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+<url><loc>https://barbarpotato.github.io/Labs/Building-a-Video-Streaming-Platform-with-AWS-S3-HLS-and-Nodejs</loc><lastmod>2025-04-04T06:47:54.942Z</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+<url><loc>https://barbarpotato.github.io/Labs/how-to-set-up-a-load-balancer-in-aws-a-simple-guide-to-keep-your-website-fast-and-scalable</loc><lastmod>2025-04-04T06:47:54.942Z</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+<url><loc>https://barbarpotato.github.io/Labs/understanding-rate-limiting-a-guide-to-staying-in-control-of-your-apis</loc><lastmod>2025-04-04T06:47:54.942Z</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+<url><loc>https://barbarpotato.github.io/Labs/building-a-simple-cqrs-pattern-architecture</loc><lastmod>2025-04-04T06:47:54.942Z</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+<url><loc>https://barbarpotato.github.io/Labs/the-concept-of-splitting-a-frontend-into-smaller-manageable-pieces</loc><lastmod>2025-04-04T06:47:54.942Z</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+<url><loc>https://barbarpotato.github.io/Labs/why-you-need-kubernetes-a-comprehensive-guide</loc><lastmod>2025-04-04T06:47:54.942Z</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+<url><loc>https://barbarpotato.github.io/Labs/mastering-apache-spark-an-engaging-dive-into-its-architecture-and-clusters</loc><lastmod>2025-04-04T06:47:54.942Z</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+<url><loc>https://barbarpotato.github.io/Labs/mapreduce-the-magic-behind-processing-big-data-in-hadoop</loc><lastmod>2025-04-04T06:47:54.942Z</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+<url><loc>https://barbarpotato.github.io/Labs/understanding-hadoop-distributed-file-system-hdfs</loc><lastmod>2025-04-04T06:47:54.942Z</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+<url><loc>https://barbarpotato.github.io/Labs/create-dashboard-app-with-electronjs</loc><lastmod>2025-04-04T06:47:54.942Z</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+<url><loc>https://barbarpotato.github.io/Labs/introduction-to-elastic-search</loc><lastmod>2025-04-04T06:47:54.942Z</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+<url><loc>https://barbarpotato.github.io/Labs/integrate-mysql-to-flask</loc><lastmod>2025-04-04T06:47:54.942Z</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+<url><loc>https://barbarpotato.github.io/Labs/search-engine-optimization</loc><lastmod>2025-04-04T06:47:54.942Z</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+<url><loc>https://barbarpotato.github.io/Labs/react-pwa-fundamental</loc><lastmod>2025-04-04T06:47:54.942Z</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+<url><loc>https://barbarpotato.github.io/Labs/graphql-fundamental</loc><lastmod>2025-04-04T06:47:54.942Z</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+<url><loc>https://barbarpotato.github.io/Labs/react-lazy-load</loc><lastmod>2025-04-04T06:47:54.942Z</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+<url><loc>https://barbarpotato.github.io/Labs/etl-using-shell-scripts</loc><lastmod>2025-04-04T06:47:54.942Z</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+<url><loc>https://barbarpotato.github.io/Labs/working-with-time--space-complexity-</loc><lastmod>2025-04-04T06:47:54.942Z</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+<url><loc>https://barbarpotato.github.io/Labs/create-a-dag-for-apache-airflow-with-python-operator</loc><lastmod>2025-04-04T06:47:54.942Z</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+<url><loc>https://barbarpotato.github.io/Labs/introduction-to-apache-kafka</loc><lastmod>2025-04-04T06:47:54.942Z</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+<url><loc>https://barbarpotato.github.io/Labs/build-kafka-python-client</loc><lastmod>2025-04-04T06:47:54.942Z</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+<url><loc>https://barbarpotato.github.io/Labs/create-grpc-with-mongodb--nodejs</loc><lastmod>2025-04-04T06:47:54.942Z</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+<url><loc>https://barbarpotato.github.io/Labs/test-driven-development-with-python</loc><lastmod>2025-04-04T06:47:54.942Z</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+<url><loc>https://barbarpotato.github.io/Labs/build-redis-in-nextjs</loc><lastmod>2025-04-04T06:47:54.942Z</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+<url><loc>https://barbarpotato.github.io/Labs/performance-testing-with-k6</loc><lastmod>2025-04-04T06:47:54.942Z</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+</urlset>
