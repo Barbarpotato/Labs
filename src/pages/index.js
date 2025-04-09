@@ -129,7 +129,7 @@ function Items({ blog }) {
                                             ? `${item.short_description.slice(0, 100)}...`
                                             : item?.short_description || 'No description'}
                                     </Text>
-                                    <a href={`/Labs/${item?.slug || ''}`} style={{ color: '#bd93f9', textDecoration: 'underline' }}>
+                                    <a href={`/Labs-${item.index}/${item?.slug || ''}`} style={{ color: '#bd93f9', textDecoration: 'underline' }}>
                                         Read More...
                                     </a>
                                 </Flex>
