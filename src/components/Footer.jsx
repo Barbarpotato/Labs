@@ -56,34 +56,6 @@ const Footer = () => {
                         w={{ base: 'full', md: 'auto' }}
                     >
                         {/* Explore Column */}
-                        <Box>
-                            <Text fontSize="sm" fontWeight="semibold" textTransform="uppercase" mb={4}>
-                                Explore
-                            </Text>
-                            <Flex direction="column" gap={2}>
-                                <Link href="https://barbarpotato.github.io/#projects" color="gray.400" _hover={{ color: 'pink.300' }} onClick={(e) => handleScroll(e, 'home')}>
-                                    Home
-                                </Link>
-                                <Link href="https://barbarpotato.github.io/#about" color="gray.400" _hover={{ color: 'pink.300' }} onClick={(e) => handleScroll(e, 'about')}>
-                                    About
-                                </Link>
-                                <Link href="https://barbarpotato.github.io/#labs" color="gray.400" _hover={{ color: 'pink.300' }} onClick={(e) => handleScroll(e, 'labs')}>
-                                    Labs
-                                </Link>
-                                <Link href="https://barbarpotato.github.io/#projects" color="gray.400" _hover={{ color: 'pink.300' }} onClick={(e) => handleScroll(e, 'projects')}>
-                                    Projects
-                                </Link>
-                                <Link href="https://barbarpotato.github.io/#experience" color="gray.400" _hover={{ color: 'pink.300' }} onClick={(e) => handleScroll(e, 'experience')}>
-                                    Experience
-                                </Link>
-                                <Link href="https://barbarpotato.github.io/#badges" color="gray.400" _hover={{ color: 'pink.300' }} onClick={(e) => handleScroll(e, 'badges')}>
-                                    Badges
-                                </Link>
-                                <Link href="https://barbarpotato.github.io/#contact" color="gray.400" _hover={{ color: 'pink.300' }} onClick={(e) => handleScroll(e, 'contact')}>
-                                    Contact Me
-                                </Link>
-                            </Flex>
-                        </Box>
 
                         {/* Connect Column */}
                         <Box>
@@ -113,8 +85,8 @@ const Footer = () => {
                                 Resources
                             </Text>
                             <Flex direction="column" gap={2}>
-                                <Link href="https://barbarpotato.github.io/Labs/" target='_blank' color="gray.400" _hover={{ color: 'pink.300' }}>
-                                    Labs
+                                <Link href="https://barbarpotato.github.io/" target='_blank' color="gray.400" _hover={{ color: 'pink.300' }}>
+                                    Main Page
                                 </Link>
                                 <Link href="https://firebasestorage.googleapis.com/v0/b/personal-blog-darmajr.appspot.com/o/personal%2FProfile.pdf?alt=media&token=84919868-97bf-453d-9e9b-f282b463cc7b"
                                     target='_blank'
