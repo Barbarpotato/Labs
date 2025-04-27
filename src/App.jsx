@@ -4,6 +4,7 @@ import { FiSearch, FiX } from 'react-icons/fi';
 import { useDatablogs, useMostUsedTags, useSearchTags } from './api/labs/GET';
 import LabPagination from './components/LabPagination';
 import useDebounce from './hooks/useDebounce';
+import DarwinButton from './components/DarwinButton';
 
 const initialState = {
   searchQuery: '',
@@ -249,6 +250,9 @@ export default function App() {
           </Flex>
         </Box>
       </Box>
+
+      <DarwinButton />
+
     </Fragment>
   );
 }

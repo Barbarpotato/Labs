@@ -1,4 +1,4 @@
-import { Flex, Button, HStack, Text, Grid, } from '@chakra-ui/react';
+import { Flex, Button, HStack, Text, Grid } from '@chakra-ui/react';
 import BlogCard from './BlogCard';
 
 // Custom Components
