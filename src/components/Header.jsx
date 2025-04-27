@@ -1,11 +1,8 @@
 
 import { Flex, Heading, Spacer } from '@chakra-ui/react';
-import { useRouter } from 'next/router';
 import { Fragment } from 'react';
 
 function Header() {
-
-    const router = useRouter();
 
     // Define colors
     const primaryFontColor = '#faf9ff';
@@ -43,30 +40,15 @@ function Header() {
                 >
 
                     <Fragment>
-
-                        {
-                            router.asPath === '/' ? (
-                                <Heading
-                                    className="navbar"
-                                    mx={6}
-                                    fontWeight="small"
-                                    color={primaryFontColor}
-                                    size="md"
-                                >
-                                    <a href="https://barbarpotato.github.io/">Home</a>
-                                </Heading>
-                            ) : (
-                                <Heading
-                                    className="navbar"
-                                    mx={6}
-                                    fontWeight="small"
-                                    color={primaryFontColor}
-                                    size="md"
-                                >
-                                    <a href="/Labs">Labs</a>
-                                </Heading>
-                            )
-                        }
+                        <Heading
+                            className="navbar"
+                            mx={6}
+                            fontWeight="small"
+                            color={primaryFontColor}
+                            size="md"
+                        >
+                            <a href="https://barbarpotato.github.io/">Home</a>
+                        </Heading>
                     </Fragment>
                 </Flex>
             </Flex>

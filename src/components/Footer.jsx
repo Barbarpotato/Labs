@@ -11,18 +11,6 @@ const Footer = () => {
 
     const currentYear = new Date().getFullYear();
 
-    // Smooth scroll handler
-    const handleScroll = (e, id) => {
-        e.preventDefault(); // Prevent default anchor behavior
-        const element = document.getElementById(id);
-        if (element) {
-            element.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start', // Align the top of the element with the top of the viewport
-            });
-        }
-    };
-
     return (
         <Box boxShadow={'dark-lg'} as="footer" mt={100} backgroundColor={"#292b37"}
             color="white" py={10}>
