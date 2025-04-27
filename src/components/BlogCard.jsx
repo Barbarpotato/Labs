@@ -1,4 +1,4 @@
-import { Card, CardBody, Image, Flex, Button, Heading, Text, Box } from '@chakra-ui/react';
+import { Card, CardBody, Image, Flex, Button, Heading, Text, Box, Spacer } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 
 function BlogCard({ blog }) {
@@ -13,63 +13,79 @@ function BlogCard({ blog }) {
                 boxShadow="dark-lg"
                 bg="#292b37"
                 overflow="hidden"
-                h={{ base: "450px", md: "550px" }} // Fixed height
+                minH={{ base: "450px", md: "550px" }}
                 display="flex"
                 flexDirection="column"
-                justifyContent="space-between"
             >
-                <Box>
-                    <Image
-                        h={{ base: "200px", md: "250px" }}
-                        w="full"
-                        src={blog?.image || 'fallback-image.jpg'}
-                        alt={blog?.image_alt || 'Article image'}
-                        borderTopRadius="2xl"
-                    />
-                </Box>
-                <CardBody p={{ base: 4, md: 6 }} flex="1">
-                    <Flex direction="column" h="100%" justifyContent="space-between">
-                        <Box>
-                            <Heading color="#faf9ff" size={{ base: "sm", md: "md" }} noOfLines={2}>
-                                {blog?.title || 'Untitled'}
-                            </Heading>
-                            <Text my={2} color="#faf9ff" fontSize={{ base: "xs", md: "sm" }}>
-                                {blog?.timestamp || 'Unknown date'}
-                            </Text>
-                            <Text
-                                textAlign="justify"
-                                color="gray.100"
-                                fontSize={{ base: "sm", md: "md" }}
-                                noOfLines={3} // Limit description height to fit design
-                            >
-                                {blog?.short_description || "No description"}
-                            </Text>
-                        </Box>
-                        <Button
-                            as="a"
-                            href={`https://barbarpotato.github.io/Labs-${blog?.index}/${blog?.slug || ''}`}
-                            bg="transparent"
-                            border="1px solid #bd93f9"
-                            color="#bd93f9"
-                            mt={5}
+                <Image
+                    h={{ base: "200px", md: "250px" }}
+                    w="full"
+                    src={blog?.image || 'fallback-image.jpg'}
+                    alt={blog?.image_alt || 'Article image'}
+                    objectFit="cover"
+                    borderTopRadius="2xl"
+                />
+
+                <CardBody p={{ base: 4, md: 6 }} display="flex" flexDirection="column" flex="1">
+                    <Box flex="1">
+                        <Heading color="#faf9ff" size={{ base: "sm", md: "md" }} noOfLines={2}>
+                            {blog?.title || 'Untitled'}
+                        </Heading>
+                        <Text my={2} color="#faf9ff" fontSize={{ base: "xs", md: "sm" }}>
+                            {blog?.timestamp || 'Unknown date'}
+                        </Text>
+                        <Text
+                            textAlign="justify"
+                            color="gray.100"
                             fontSize={{ base: "sm", md: "md" }}
-                            fontWeight="medium"
-                            borderRadius="full"
-                            px={5}
-                            py={2}
-                            _hover={{
-                                bg: "#bd93f9",
-                                color: "#292b37",
-                                transform: "scale(1.05)",
-                                transition: "all 0.3s ease",
-                            }}
-                            alignSelf="start"
+                            noOfLines={3}
                         >
-                            Read More
-                        </Button>
-                    </Flex>
+                            {blog?.short_description || "No description"}
+                        </Text>
+
+                        <Flex wrap="wrap" mt={2} gap={2}>
+                            {blog?.tags?.map((tag, index) => (
+                                <Box
+                                    key={index}
+                                    bg="#E2E8F0"
+                                    color="#2D3748"
+                                    fontSize="2xs"
+                                    fontWeight="bold"
+                                    px={3}
+                                    py={1}
+                                    borderRadius="full"
+                                >
+                                    {tag}
+                                </Box>
+                            ))}
+                        </Flex>
+                    </Box>
+
+                    <Button
+                        as="a"
+                        href={`https://barbarpotato.github.io/Labs-${blog?.index}/${blog?.slug || ''}`}
+                        bg="transparent"
+                        border="1px solid #bd93f9"
+                        color="#bd93f9"
+                        mt={5}
+                        fontSize={{ base: "sm", md: "md" }}
+                        fontWeight="medium"
+                        borderRadius="full"
+                        px={5}
+                        py={2}
+                        _hover={{
+                            bg: "#bd93f9",
+                            color: "#292b37",
+                            transform: "scale(1.05)",
+                            transition: "all 0.3s ease",
+                        }}
+                        alignSelf="start"
+                    >
+                        Read More
+                    </Button>
                 </CardBody>
             </Card>
+
         </motion.div>
     );
 }
