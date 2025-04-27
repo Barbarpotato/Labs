@@ -13,7 +13,7 @@ function BlogCard({ blog }) {
                 boxShadow="dark-lg"
                 bg="#292b37"
                 overflow="hidden"
-                h={{ base: "400px", md: "550px" }} // Fixed height
+                h={{ base: "450px", md: "550px" }} // Fixed height
                 display="flex"
                 flexDirection="column"
                 justifyContent="space-between"
