@@ -6,6 +6,9 @@ import LabPagination from './components/LabPagination';
 import useDebounce from './hooks/useDebounce';
 import DarwinButton from './components/DarwinButton';
 
+import { motion } from 'framer-motion';
+import { Navigation, Footer } from 'personal-shared-layout';
+
 const initialState = {
   searchQuery: '',
   tagSearchQuery: '',
@@ -82,18 +85,35 @@ export default function App() {
 
   return (
     <Fragment>
-      <Box minH="100vh" bg="#292b37">
+
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
+        <Navigation />
+      </motion.div>
+
+      <Box minH="100vh" bg="#292b37" py={20}>
+
         {/* Hero Section */}
-        <Box py={{ base: 8, md: 12 }} borderBottomWidth={1} borderColor="#536189">
-          <Box maxW="7xl" mx="auto" px={{ base: 4, md: 6 }}>
-            <Heading as="h1" size={{ base: 'xl', md: '2xl' }} color="#faf9ff" mb={4}>
-              Labs
-            </Heading>
-            <Text fontSize={{ base: 'md', md: 'lg' }} color="#faf9ff" maxW="2xl">
-              Technical articles, tutorials, and insights about web development and software engineering.
-            </Text>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+        >
+          <Box py={{ base: 8, md: 12 }} borderBottomWidth={1} borderColor="#536189">
+            <Box maxW="7xl" mx="auto" px={{ base: 4, md: 6 }}>
+              <Heading as="h1" size={{ base: 'xl', md: '2xl' }} color="#faf9ff" mb={4}>
+                Labs
+              </Heading>
+              <Text fontSize={{ base: 'md', md: 'lg' }} color="#faf9ff" maxW="2xl">
+                Technical articles, tutorials, and insights about web development and software engineering.
+              </Text>
+            </Box>
           </Box>
-        </Box>
+        </motion.div>
 
         {/* Main Content */}
         <Box maxW="7xl" mx="auto" py={{ base: 8, md: 12 }} px={{ base: 4, md: 6 }}>
@@ -252,6 +272,15 @@ export default function App() {
       </Box>
 
       <DarwinButton />
+
+      {/* Footer transition */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4, delay: 0.2 }}
+      >
+        <Footer />
+      </motion.div>
 
     </Fragment>
   );

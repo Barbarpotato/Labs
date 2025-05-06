@@ -13,10 +13,11 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "personal-shared-layout": "github:Barbarpotato/personal-shared-layout",
     "@chakra-ui/react": "^2.8.2",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
-    "framer-motion": "^10.18.0",
+    "framer-motion": "^11.0.3",
     "react-query": "^3.39.3",
     "react-icons": "^5.4.0",
     "@types/react": "^18.0.28",
