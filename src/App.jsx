@@ -4,7 +4,6 @@ import { FiSearch, FiX } from 'react-icons/fi';
 import { useDatablogs, useMostUsedTags, useSearchTags } from './api/labs/GET';
 import LabPagination from './components/LabPagination';
 import useDebounce from './hooks/useDebounce';
-import DarwinButton from './components/DarwinButton';
 
 import { motion } from 'framer-motion';
 import { Navigation, Footer } from 'personal-shared-layout';
@@ -270,8 +269,6 @@ export default function App() {
           </Flex>
         </Box>
       </Box>
-
-      <DarwinButton />
 
       {/* Footer transition */}
       <motion.div
