@@ -4,7 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "prefetch": "node prefetch.js",
+    "dev": "npm run prefetch && vite",
     "build": "vite build",
     "preview": "vite preview"
   },

@@ -1,91 +1,117 @@
-import { Card, CardBody, Image, Flex, Button, Heading, Text, Box, Spacer } from '@chakra-ui/react';
+import { Flex, Heading, Text, Box } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
+import { FiArrowRight } from 'react-icons/fi';
 
-function BlogCard({ blog }) {
+function BlogCard({ blog, index = 0 }) {
     return (
         <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, ease: [0, 0.71, 0.2, 1.01] }}
+            initial={{ opacity: 0, y: 20, scale: 0.98 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 0.5, ease: 'easeOut', delay: index * 0.08 }}
         >
-            <Card
-                borderRadius="2xl"
-                boxShadow="dark-lg"
-                bg="#292b37"
+            <Box
+                className="project-card"
+                bg="#383a4a"
+                borderRadius="xl"
                 overflow="hidden"
-                minH={{ base: "450px", md: "550px" }}
                 display="flex"
                 flexDirection="column"
+                minH={{ base: '400px', md: '480px' }}
+                boxShadow="md"
             >
-                <Image
-                    h={{ base: "200px", md: "250px" }}
-                    w="full"
-                    src={blog?.image || 'fallback-image.jpg'}
-                    alt={blog?.image_alt || 'Article image'}
-                    objectFit="cover"
-                    borderTopRadius="2xl"
-                />
+                {/* Gambar dengan efek zoom */}
+                <Box className="zoom-container" h={{ base: '180px', md: '210px' }} flexShrink={0}>
+                    <img
+                        src={blog?.image || ''}
+                        alt={blog?.image_alt || 'Gambar artikel'}
+                    />
+                </Box>
 
-                <CardBody p={{ base: 4, md: 6 }} display="flex" flexDirection="column" flex="1">
+                {/* Isi kartu */}
+                <Box p={6} display="flex" flexDirection="column" flex="1">
                     <Box flex="1">
-                        <Heading color="#faf9ff" size={{ base: "sm", md: "md" }} noOfLines={2}>
-                            {blog?.title || 'Untitled'}
-                        </Heading>
-                        <Text my={2} color="#faf9ff" fontSize={{ base: "xs", md: "sm" }}>
-                            {blog?.timestamp || 'Unknown date'}
-                        </Text>
-                        <Text
-                            textAlign="justify"
-                            color="gray.100"
-                            fontSize={{ base: "sm", md: "md" }}
-                            noOfLines={3}
-                        >
-                            {blog?.short_description || "No description"}
-                        </Text>
-
-                        <Flex wrap="wrap" mt={2} gap={2}>
-                            {blog?.tags?.map((tag, index) => (
+                        {/* Tag */}
+                        <Flex wrap="wrap" gap={2} mb={3}>
+                            {blog?.tags?.slice(0, 3).map((tag, i) => (
                                 <Box
-                                    key={index}
-                                    bg="#E2E8F0"
-                                    color="#2D3748"
-                                    fontSize="2xs"
-                                    fontWeight="bold"
+                                    key={i}
                                     px={3}
-                                    py={1}
+                                    py="3px"
                                     borderRadius="full"
+                                    border="1px solid rgba(134, 107, 171, 0.35)"
+                                    color="#bd93f9"
+                                    fontSize="2xs"
+                                    fontWeight="600"
+                                    fontFamily="'Outfit', system-ui, sans-serif"
+                                    letterSpacing="0.04em"
+                                    textTransform="uppercase"
                                 >
                                     {tag}
                                 </Box>
                             ))}
                         </Flex>
+
+                        {/* Judul */}
+                        <Heading
+                            fontFamily="'Playfair Display', Georgia, serif"
+                            fontWeight="700"
+                            color="#faf9ff"
+                            fontSize={{ base: 'lg', md: 'xl' }}
+                            noOfLines={2}
+                            mb={2}
+                            lineHeight="1.35"
+                        >
+                            {blog?.title || 'Tanpa Judul'}
+                        </Heading>
+
+                        {/* Tanggal */}
+                        <Text
+                            fontFamily="'Outfit', system-ui, sans-serif"
+                            color="#c0c0c0"
+                            fontSize="xs"
+                            mb={3}
+                        >
+                            {blog?.timestamp || 'Tanggal tidak diketahui'}
+                        </Text>
+
+                        {/* Deskripsi singkat */}
+                        <Text
+                            fontFamily="'Outfit', system-ui, sans-serif"
+                            color="#d0d0d0"
+                            fontSize="sm"
+                            lineHeight="1.75"
+                            noOfLines={3}
+                        >
+                            {blog?.short_description || 'Tidak ada deskripsi.'}
+                        </Text>
                     </Box>
 
-                    <Button
+                    {/* Tombol baca */}
+                    <Box
                         as="a"
                         href={`https://barbarpotato.github.io/Labs-${blog?.index}/${blog?.slug || ''}`}
-                        bg="transparent"
-                        border="1px solid #bd93f9"
-                        color="#bd93f9"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         mt={5}
-                        fontSize={{ base: "sm", md: "md" }}
-                        fontWeight="medium"
-                        borderRadius="full"
-                        px={5}
-                        py={2}
-                        _hover={{
-                            bg: "#bd93f9",
-                            color: "#292b37",
-                            transform: "scale(1.05)",
-                            transition: "all 0.3s ease",
-                        }}
-                        alignSelf="start"
+                        display="inline-flex"
+                        alignItems="center"
+                        gap={1.5}
+                        color="#866bab"
+                        fontFamily="'Outfit', system-ui, sans-serif"
+                        fontWeight="500"
+                        fontSize="sm"
+                        borderBottom="1.5px solid"
+                        borderColor="#866bab"
+                        pb="1px"
+                        width="fit-content"
+                        transition="all 0.2s ease"
+                        _hover={{ color: '#cc7bc9', borderColor: '#cc7bc9', textDecoration: 'none' }}
                     >
-                        Read More
-                    </Button>
-                </CardBody>
-            </Card>
-
+                        Baca Selengkapnya
+                        <FiArrowRight size={13} />
+                    </Box>
+                </Box>
+            </Box>
         </motion.div>
     );
 }
