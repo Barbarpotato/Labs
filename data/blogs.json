@@ -1,0 +1,186 @@
+[
+  {
+    "blog_id": "a15b82ab-ef28-45ed-ab8e-e5fe473a9151",
+    "title": "Jangan Boros karena Ilusi Produktivitas dan Bahaya Pseudosains dalam Organisasi",
+    "short_description": "Kerja keras tidak selalu berarti hasil. Banyak organisasi terjebak dalam metrik palsu dan pembelajaran semu. Lean mengajarkan untuk fokus pada validasi, bukan ilusi produktivitas.",
+    "timestamp": "2026-06-27 01:47:14",
+    "image": "https://storage.googleapis.com/personal-blog-darmajr.appspot.com/blog-content/1782523523228_Lean-startup-part-final.png",
+    "image_alt": "lean-startup-final-part",
+    "slug": "Jangan-Boros-karena-Ilusi-Produktivitas-dan-Bahaya-Pseudosains-dalam-Organisasi",
+    "index": "6b86b273ff34f",
+    "tags": [
+      "Lean Startup",
+      "Pseudosains",
+      "Jangan Boros"
+    ]
+  },
+  {
+    "blog_id": "4aec98d8-da30-42f4-8c51-eb39c6470e50",
+    "title": "Berinovasi Tanpa Chaos Melalui Sandbox dan Melawan Status Quo",
+    "short_description": "Inovasi sering gagal bukan karena ide, tapi karena sistem. Dengan sandbox, small batch, dan transparansi, tim bisa bereksperimen tanpa merusak organisasi.",
+    "timestamp": "2026-06-27 01:36:30",
+    "image": "https://storage.googleapis.com/personal-blog-darmajr.appspot.com/blog-content/1782523516793_Lean-startup-part-11.png",
+    "image_alt": "lean-startup-part-11",
+    "slug": "Berinovasi-Tanpa-Chaos-Melalui-Sandbox-dan-Melawan-Status-Quo",
+    "index": "6b86b273ff34f",
+    "tags": [
+      "Lean Startup",
+      "Innovation",
+      "Batch Kecil",
+      "Sandbox"
+    ]
+  },
+  {
+    "blog_id": "b72774b5-4e6d-4566-a12d-908528b1f017",
+    "title": "Adaptasi Dalam Small Batch Untuk Menemukan Kecepatan yang Tepat",
+    "short_description": "Kecepatan tanpa kontrol bisa merusak. Dengan small batch, andon, dan 5 Whys, tim belajar beradaptasi lebih cepat tanpa mengorbankan kualitas.",
+    "timestamp": "2026-06-27 01:22:52",
+    "image": "https://storage.googleapis.com/personal-blog-darmajr.appspot.com/blog-content/1782522145342_Lean-startup-part-10.png",
+    "image_alt": "lean-startup-part-10",
+    "slug": "Adaptasi-Dalam-Small-Batch-Untuk-Menemukan-Kecepatan-yang-Tepat",
+    "index": "6b86b273ff34f",
+    "tags": [
+      "Lean Startup",
+      "5-whys",
+      "Akselerasi",
+      "Batch Kecil",
+      "Adaptasi"
+    ]
+  },
+  {
+    "blog_id": "61df5c1b-d40d-4f29-888f-0c7002f9bf1a",
+    "title": "Small Batch Thinking dan Akselerasi Lewat Eksperimen Kecil",
+    "short_description": "Pendekatan small batch membantu kita belajar lebih cepat dengan risiko minimal, tanpa membuang sumber daya pada skala besar yang belum tervalidasi.",
+    "timestamp": "2026-06-27 01:14:45",
+    "image": "https://storage.googleapis.com/personal-blog-darmajr.appspot.com/blog-content/1782522135384_Lean-startup-part-9.png",
+    "image_alt": "lean-startup-part-9",
+    "slug": "Small-Batch-Thinking-dan-Akselerasi-Lewat-Eksperimen-Kecil",
+    "index": "6b86b273ff34f",
+    "tags": [
+      "Lean Startup",
+      "Mesin Pertumbuhan",
+      "Growth"
+    ]
+  },
+  {
+    "blog_id": "4f4d0da7-764c-4bd8-b498-087af6c03786",
+    "title": "Akselerasi Dimulai dari Small Batch Bukan Skala Besar",
+    "short_description": "Small batch bukan memperlambat, justru mempercepat pembelajaran. Dengan memulai dari skala kecil, kamu bisa menguji, gagal, dan memperbaiki lebih cepat sebelum terlambat. Artikel ini membahas kenapa pendekatan kecil justru menjadi kunci akselerasi nyata dalam startup.",
+    "timestamp": "2026-06-27 00:59:54",
+    "image": "https://storage.googleapis.com/personal-blog-darmajr.appspot.com/blog-content/1782520183990_Lean-startup-part-8.png",
+    "image_alt": "lean-startup-8",
+    "slug": "Akselerasi-Dimulai-dari-Small-Batch-Bukan-Skala-Besar",
+    "index": "6b86b273ff34f",
+    "tags": [
+      "Lean Startup",
+      "Batch Kecil",
+      "Akselerasi"
+    ]
+  },
+  {
+    "blog_id": "6801f1c3-df65-4e60-bcb7-cda5d995b43c",
+    "title": "Ketika Data Mengalahkan Ego dalam Kisah Banting Stir Votizen",
+    "short_description": "Kisah Votizen menunjukkan bahwa keberhasilan bukan soal ide, tapi keberanian berubah berdasarkan data. Dari hipotesis yang gagal hingga pivot, keputusan terbaik datang dari realita, bukan ego.",
+    "timestamp": "2026-06-27 00:45:30",
+    "image": "https://storage.googleapis.com/personal-blog-darmajr.appspot.com/blog-content/1782520178193_Lean-startup-part-7.png",
+    "image_alt": "lean-startup-part-7",
+    "slug": "Ketika-Data-Mengalahkan-Ego-dalam-Kisah-Banting-Stir-Votizen",
+    "index": "6b86b273ff34f",
+    "tags": [
+      "Lean Startup",
+      "Pivot",
+      "Banting Stir"
+    ]
+  },
+  {
+    "blog_id": "0b83d03f-373b-458f-8a49-ac8b03692341",
+    "title": "Cara Startup Mengukur Pertumbuhan yang Sebenarnya",
+    "short_description": "Banyak startup fokus ke angka besar seperti total user atau growth bulanan, tapi itu belum cukup untuk melihat kondisi sebenarnya. Yang lebih penting adalah memahami perilaku user lewat cohort, retensi, dan eksperimen. Dari situ, tim bisa tahu apa yang perlu diperbaiki dan apa yang harus diulang.",
+    "timestamp": "2026-06-21 12:40:42",
+    "image": "https://storage.googleapis.com/personal-blog-darmajr.appspot.com/blog-content/1780493403580_Lean-startup-part-6.png",
+    "image_alt": "lean-startup-part-6",
+    "slug": "Cara-Startup-Mengukur-Pertumbuhan-yang-Sebenarnya",
+    "index": "6b86b273ff34f",
+    "tags": [
+      "Lean Startup",
+      "Actionable Metric",
+      "Cohort Analysis",
+      "A/B Testing",
+      "Multivariate Testing"
+    ]
+  },
+  {
+    "blog_id": "9f0f3549-9b66-4d73-9d64-abf8b72a6498",
+    "title": "Hipotesis Nilai Tambah dan Hipotesis Pertumbuhan",
+    "short_description": "Niat baik belum tentu bernilai, Lewat studi kasus Hewlett-Packard, artikel ini membongkar bagaimana bahkan program sosial pun harus diuji seperti produk, mulai dari nilai hingga pertumbuhannya",
+    "timestamp": "2026-06-21 12:37:54",
+    "image": "https://storage.googleapis.com/personal-blog-darmajr.appspot.com/blog-content/1780493401056_Lean-startup-part-5.png",
+    "image_alt": "lean-startup-part-5",
+    "slug": "Hipotesis-Nilai-Tambah-dan-Hipotesis-Pertumbuhan",
+    "index": "6b86b273ff34f",
+    "tags": [
+      "Lean Startup",
+      "Hipotesis Nilai Tambah",
+      "Hipotesis Pertumbuhan"
+    ]
+  },
+  {
+    "blog_id": "e43a15bc-478a-4f73-9012-6cd8ca3e4e87",
+    "title": "Innovation Accounting",
+    "short_description": "Tidak semua pertumbuhan itu nyata. Melalui innovation accounting, kamu akan memahami cara mengukur kemajuan startup secara lebih akurat, dari MVP hingga keputusan pivot atau bertahan.",
+    "timestamp": "2026-06-06 14:33:38",
+    "image": "https://storage.googleapis.com/personal-blog-darmajr.appspot.com/blog-content/1780493396321_Lean-startup-part-4.png",
+    "image_alt": "lean-startup-part-4",
+    "slug": "Innovation-Accounting",
+    "index": "6b86b273ff34f",
+    "tags": [
+      "Lean Startup",
+      "Innovation Accounting"
+    ]
+  },
+  {
+    "blog_id": "170ad858-739b-4006-b807-38645720e20b",
+    "title": "MVP Sebagai Alat Belajar",
+    "short_description": "Banyak developer salah paham tentang MVP. Pelajari bagaimana MVP seharusnya digunakan untuk validasi cepat, bukan untuk membangun produk sempurna.",
+    "timestamp": "2026-06-03 13:27:49",
+    "image": "https://storage.googleapis.com/personal-blog-darmajr.appspot.com/blog-content/1780492804372_Lean-startup-Part-3.png",
+    "image_alt": "lean-startup-part-3",
+    "slug": "MVP-Sebagai-Alat-Belajar",
+    "index": "6b86b273ff34f",
+    "tags": [
+      "Lean Startup",
+      "MVP"
+    ]
+  },
+  {
+    "blog_id": "b2cfe482-6a22-413e-b29e-4a128d9c4a4a",
+    "title": "Memahami Analog, Antilog dan Arketipe",
+    "short_description": "Belajar bagaimana ide produk terbentuk dari referensi yang ada, lalu berkembang menjadi inovasi melalui diferensiasi dan pemahaman mendalam terhadap pengguna.",
+    "timestamp": "2026-06-03 13:10:22",
+    "image": "https://storage.googleapis.com/personal-blog-darmajr.appspot.com/blog-content/1780491675092_Lean%20startup-part-2.png",
+    "image_alt": "lean-startup-part-2",
+    "slug": "Memahami-Analog-Antilog-dan-Arketipe",
+    "index": "6b86b273ff34f",
+    "tags": [
+      "Lean Startup",
+      "analog",
+      "antilog",
+      "arketipe"
+    ]
+  },
+  {
+    "blog_id": "ad0781e3-a9af-4748-b0ad-e29bd3c3e55d",
+    "title": "Build, Measure & Learn",
+    "short_description": "Belajar cara membangun produk dengan cepat tanpa kehilangan arah melalui konsep Build–Measure–Learn dari Lean Startup. Cocok untuk developer yang ingin naik level dari sekadar ngoding ke product thinking.",
+    "timestamp": "2026-06-03 12:52:48",
+    "image": "https://storage.googleapis.com/personal-blog-darmajr.appspot.com/blog-content/1780489841756_Lean%20startup.png",
+    "image_alt": "Learn-Startup-Part-1",
+    "slug": "Build-Measure--Learn",
+    "index": "6b86b273ff34f",
+    "tags": [
+      "Lean Startup",
+      "Akuntansi Inovasi",
+      "MVP"
+    ]
+  }
+]
