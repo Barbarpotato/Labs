@@ -90,7 +90,6 @@ function BlogCard({ blog, index = 0 }) {
                     <Box
                         as="a"
                         href={`https://barbarpotato.github.io/Labs-${blog?.index}/${blog?.slug || ''}`}
-                        target="_blank"
                         rel="noopener noreferrer"
                         mt={5}
                         display="inline-flex"
